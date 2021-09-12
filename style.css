@@ -1,0 +1,137 @@
+body {
+    background-color: rgb(67, 71, 75);
+    font-family: 'Nunito', sans-serif;
+}
+h1 { width: 80%; }
+h2 { width: 60%; }
+h1, h2 {
+    margin: 1.5em auto 1.25em auto;
+    border-bottom: 0.05em solid black;
+    padding-bottom: 0.2em;
+}
+p {
+    padding-left: 5em;
+    padding-right: 5em;
+}
+strong { color: rgb(27, 31, 35); }
+
+#nav-bar {
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+    left: 0;
+    top: 0;
+    position: fixed;
+    background-color: rgb(47, 51, 55);
+    width: 100%;
+    border-bottom: 0.2em solid black;
+}
+.nav-bar-link {
+    margin-left: 1em;
+    font-size: 1.25em;
+    text-align: center;
+    color: rgb(180, 180, 180);
+    font-weight: bold;
+    text-decoration: none;
+}
+.nav-bar-link:hover { color: rgb(220, 220, 220); }
+#nav-bar .active { color: white; }
+
+#content {
+    text-align: center;
+    margin: 5em auto 3em auto;
+    background-color: white;
+    width: 85%;
+    max-width: 1139px;
+    border: 0.2em solid black;
+}
+#content a {
+    text-decoration: none;
+    color: rgb(27, 31, 35);
+}
+#content a:hover { color: rgb(67, 71, 75); }
+
+.demo-table {
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+}
+.demo-table td, .demo-table th {
+    padding: 0.2em 1.2em 0.2em 1.2em;
+    border: 0.1em solid black;
+}
+.demo-table th {
+    background-color: rgb(102, 106, 110);
+    color: white;
+}
+
+li, form { text-align: left; }
+li {
+    margin-left: 7%;
+    padding-right: 3em;
+    padding-bottom: 0.5em;
+}
+
+form {
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+    border: 0.2em solid black;
+}
+form input, form textarea { margin-left: 2em; }
+form div {
+    padding-left: 2em;
+    padding-right: 2em;
+}
+span {
+    font-weight: bold;
+    padding-left: 1.6em;
+}
+.labels-br { display: none; }
+#e-mail { width: 60%; }
+#issue-description {
+    font: inherit;
+    resize: none;
+    margin-top: 0;
+    width: 93%;
+    height: 6em;
+    margin-left: 1.6em;
+}
+#send {
+    margin: 1em auto 1.5em 2.3em;
+    color: white;
+    font: inherit;
+    font-size: 0.9em;
+    font-weight: bold;
+    padding: 0.2em 1em 0.2em 1em;
+    background-color: rgb(67, 71, 75);
+    border: 0.1em solid rgb(27, 31, 35);
+}
+#send:hover { background-color: rgb(107, 111, 115); }
+
+@media screen and (max-width: 960px) {
+    p {
+        padding-left: 4em;
+        padding-right: 4em;
+    }
+    #issue-description {
+        width: 87%;
+        height: 9em;
+    }
+}
+@media screen and (max-width: 560px) {
+    .labels-br { display: inline; }
+}
+@media screen and (max-width: 610px) {
+    .demo-table {
+        display: block;
+        overflow-x: auto;
+        margin-left: 2em;
+        border: 0.1em solid black;
+    }
+    .demo-table td { min-width: 12em; }
+    #issue-description {
+        width: 78%;
+        height: 12em;
+    }
+}

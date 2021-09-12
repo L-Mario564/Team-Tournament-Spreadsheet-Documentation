@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="style.css">
+    <title>Scripts</title>
+</head>
+<body>
+    <div id="nav-bar">
+        <a href="index.html" class="nav-bar-link">Home</a>
+        <a href="sheets.html" class="nav-bar-link">Sheets</a>
+        <a href="scripts.html" class="nav-bar-link active">Scripts</a>
+        <a href="contact.html" class="nav-bar-link">Contact</a>
+    </div>
+    <div id="content">
+        <h1>Spreadsheet Scripts</h1>
+        <p>A description of each script within the Spreadsheet Scripts menu.</p>
+        <h2>Config</h2>
+        <table class="demo-table">
+            <col style="width: 25%;">
+            <col style="width: 75%;">
+            <tr>
+                <th>Script Name</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td><b>Authorize Scripts</b></td>
+                <td>Script that authorizes the scripts. In other words, it's the script that allows you to run all other scripts.</td>
+            </tr>
+            <tr>
+                <td><b>Save An API Key</b></td>
+                <td>It stores the inputted API key into Google Sheet's Property Service, the API key is used to get data for beatmaps and MP links. If you've already inputted one and wish to change it, run this script again to change your key.</td>
+            </tr>
+        </table>
+        <h2>Create</h2>
+        <table class="demo-table">
+            <col style="width: 25%;">
+            <col style="width: 75%;">
+            <tr>
+                <th>Script Name</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td><b>Create New Scores Sheet</b></td>
+                <td>Creates a copy of the Scores Template sheet and uses the Settings Sheet and Mappools Sheet as references for it's set up.</td>
+            </tr>
+            <tr>
+                <td><b>Create New Scouting Sheet</b></td>
+                <td>Creates a copy of the Scouting Template sheet and uses the Settings Sheet and Mappools Sheet as references for it's set up.</td>
+            </tr>
+            <tr>
+                <td><b>Create New Availability Sheet</b></td>
+                <td>Creates a copy of the Availability Template sheet and uses the Settings Sheet as reference for it's set up.</td>
+            </tr>
+        </table>
+        <h2>Update</h2>
+        <table class="demo-table">
+            <col style="width: 25%;">
+            <col style="width: 75%;">
+            <tr>
+                <th>Script Name</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td><b>Update Settings</b></td>
+                <td>Updates every sheet to match the inputs provided in the Settings Sheet.</td>
+            </tr>
+            <tr>
+                <td><b>Update Mappools</b></td>
+                <td>Updates the Mappools Sheet to match the mappools found in the tournament's Main Sheet.</td>
+            </tr>
+        </table>
+        <h2>Delete</h2>
+        <table class="demo-table">
+            <col style="width: 25%;">
+            <col style="width: 75%;">
+            <tr>
+                <th>Script Name</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td><b>Delete Settings</b></td>
+                <td>Deletes all the inputs in the Settings Sheet.</td>
+            </tr>
+            <tr>
+                <td><b>Delete Mappools</b></td>
+                <td>Deletes all the mappools in the Mappools Sheet. This script doesn't remove mappools from Properties Service.</td>
+            </tr>
+            <tr>
+                <td><b>Delete API Key</b></td>
+                <td>Deletes the API key from the spreadsheet if there is one.</td>
+            </tr>
+        </table><br><br>
+    </div>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="style.css">
+    <title>Sheets</title>
+</head>
+<body>
+    <div id="nav-bar">
+        <a href="index.html" class="nav-bar-link">Home</a>
+        <a href="sheets.html" class="nav-bar-link active">Sheets</a>
+        <a href="scripts.html" class="nav-bar-link">Scripts</a>
+        <a href="contact.html" class="nav-bar-link">Contact</a>
+    </div>
+    <div id="content">
+        <!-- Settings Sheet -->
+        <h1>Settings Sheet</h1>
+        <p>Sheet used as reference for some scripts, you must fill the required inputs for the spreadsheet to work properly.</p>
+        <h2>General Settings</h2>
+        <table class="demo-table">
+            <col style="width: 18%;">
+            <col style="width: 27%;">
+            <col style="width: 55%;">
+            <tr>
+                <th>Setting</th>
+                <th>Valid Inputs</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td><b>Max. Player Count</b></td>
+                <td>A number between 1 and 8 (inclusive).</td>
+                <td>Maximum amount of players that are able to be in a team in the tournament. Or it can be the player count of your team in case it's lower than the maximum allowed by the tournament.</td>
+            </tr>
+            <tr>
+                <td><b>Format</b></td>
+                <td>"1v1", "2v2", "3v3" and "4v4" (Without quotation marks).</td>
+                <td>Team format of the tournament.</td>
+            </tr>
+            <tr>
+                <td><b>Mappool Count</b></td>
+                <td>A number between 1 and 9 (inclusive).</td>
+                <td>Amount of mappools that will be played during the tournament.</td>
+            </tr>
+            <tr>
+                <td><b>Tourney Spreadsheet URL / ID</b></td>
+                <td>A spreadsheet URL or a spreadsheet ID of the Main Sheet of the tournament.</td>
+                <td>Self-explanatory. (Example: https://docs.google.com/spreadsheets/d/.../edit#gid=...)</td>
+            </tr>
+        </table>
+        <h2>Roster Setup</h2>
+        <p>You need to input the usernames of the players in your team, the first player being the captain and the order of the rest doesn't matter.</p>
+        <h2>Mappools Settings</h2>
+        <table class="demo-table">
+            <col style="width: 18%;">
+            <col style="width: 27%;">
+            <col style="width: 55%;">
+            <tr>
+                <th>Setting</th>
+                <th>Valid Inputs</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td><b>Map ID Column</b></td>
+                <td>The index letter of the column where all beatmap IDs can be found.</td>
+                <td>Find the column in the mappool sheet where you're able to find all beatmap IDs and that'll be your input. Letter must be capitalized.</td>
+            </tr>
+            <tr>
+                <td><b>Mod # Column</b></td>
+                <td>The index letter of the column where all mods can be found.</td>
+                <td>Find the column in the mappool sheet where you're able to find all mods (to be more specific, you're looking for the column containing: NM1, HR3, FM2, etc.) and that'll be your input. Letter must be captilized.</td>
+            </tr>
+            <tr>
+                <td><b>First Map Of Every Mappool</b></td>
+                <td>The first mod # of each mappool.</td>
+                <td>In most cases the first map will be NM1, I made it an input in case it's a gimmick tournament with special mappools, otherwise your input will almost always be "NM1" (without quotation marks).</td>
+            </tr>
+            <tr>
+                <td><b>Mappool Order</b></td>
+                <td>"Ascending Order" and "Descending Order".</td>
+                <td>Choose Ascending Order if the first mappool is found at the top of the mappool sheet in the Main Sheet. Choose Descending Order if the first mappool is found at the bottom of it.</td>
+            </tr>
+        </table>
+        <p>For the second table you need to input the mappool names in order (Example: 1st Mappool = Qualifiers, 2nd Mappool = Round of 32, etc.)</p>
+        <h2>FM Mods</h2>
+        <p>If the tournament doesn't have FM modpools, you can leave this untouched.</p>
+        <p>The checkbox next to each mod indicates wether that mod or mod combination is allowed or banned for FM maps within the tournament. The multiplier column enables the use of calculating scores taking into account the multipliers for that tournament. If there's no multiplier for certain mods, leave it as it is. In the case it does have a multiplier, input the respective number that applies to that mod.</p>
+        <p>This can be very useful in case there's mods with large nerfs or buffs. For example: In some cases EZ is multiplied by 2. You'll be able to take that multiplier into account during a match for more accurate rosters and team score averages and sums for FM maps.</p>
+        <h2>Apply Changes</h2>
+        <p>To apply all these changes go to <strong>Spreadsheet Scripts > Update > Update Settings</strong>. The script will do the rest.</p>
+        <br><br>
+        <!-- Mappools Sheet -->
+        <h1>Mappools Sheet</h1>
+        <p>This is where you'll be able to display all the tournaments mappools in this spreadsheet. It searches the Main Sheet for all the sheets (or the sheet in case it's only one) where mappools can be found, it finds it via input provided in Mappools Settings in the Settings Sheet, so make sure you have the necessary inputs before continuing.</p>
+        <h2>Getting Mappools</h2>
+        <p>As long as you have everything set up correctly, to display a mappool it should be as simple as going to <strong>Spreadsheet Scripts > Update > Update Mappools</strong>, a script will start running and should finish within a few seconds. Once ended, the mappools should have loaded into this sheet. You'll have to run this script each time a new mappool is added or a mappool is changed.</p><br><br>
+        <!-- Availability Sheet -->
+        <h1>Availability Sheet</h1>
+        <p>In this sheet, you'll be able to keep track of your team's availability for the tournament or for each stage in case you want to use one per each round. There's a comment section at the bottom so each player can clarify / justify any circumstance relating to scheduling.</p>
+        <p>To use it, simply copy the colors corresponding to each status at the top of sheet and paste it in the respective time.</p>
+        <h2>Making A Copy</h2>
+        <p>To make a copy from the Availability Sheet Template, go to <strong>Spreadsheet Scripts > Create > Create New Availability Sheet</strong>, you'll be prompted a name for the new sheet and with that done your new availability sheet is ready for use.</p><br><br>
+        <!-- Scores Sheet -->
+        <h1>Scores Sheet</h1>
+        <p>This is the sheet where you'll be able to keep track of your team's scores for each stage of the tournament.</p>
+        <h2>Making A Copy</h2>
+        <p>To make a copy from the Scores Sheet Template, go to <strong>Spreadsheet Scripts > Create > Create New Scores Sheet</strong>, you'll be prompted a name for the new sheet and the mappool you wish to submit scores for, the script will do the rest.</p>
+        <h2>Score Submission</h2>
+        <p>To submit scores, you don't need to input the last 3 digits of a score, as they aren't relevant, the sheet will then calculate the average of your score multiplied by 1000, so if you got a score of 241,903, you can input it as 241, and the sheet will then make it 241,000.</p>
+        <p>For FM maps, I mentioned that you can apply multipliers on score submission, to apply these, follow this syntax: <strong>=multiplier(modAcronym, score)</strong>. Example: <strong>=multiplier(EZ, 132)</strong>, if the EZ multiplier is 2, then the output will be 264 (which then gets multiplied by 1000).</p><br><br>
+        <!-- Scouting Sheet -->
+        <h1>Scouting Sheet</h1>
+        <p>In this sheet you are able to compare your team's scores and your next opponent's scores from 2 multiplayer lobbies that share the same mappool to see which picks might favour you or your opponent.</p>
+        <h2>Making A Copy</h2>
+        <p>To make a copy from the Scores Sheet Template, go to <strong>Spreadsheet Scripts > Create > Create New Scouting Sheet</strong>, you'll be prompted a name for the new sheet and the mappool you wish to scout scores from, the script will do the rest.</p>
+        <h2>Scouting</h2>
+        <p>To compare scores, you need 2 MP lobby links, both have to be played using the same mappool, one link for your team and another one for your opponent to scout. You'll also need to provide the roster of the team to scout, your team's roster is automatically filled using the Settings Sheet as reference. I suggest inputting the roster before the MP links so the script doesn't run each time you update the opponent's roster.</p><br><br>
+    </div>
+</body>
+</html>
