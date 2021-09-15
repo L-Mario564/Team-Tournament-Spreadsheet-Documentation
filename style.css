@@ -1,6 +1,8 @@
 body {
     background-color: rgb(67, 71, 75);
     font-family: 'Nunito', sans-serif;
+    margin: 0;
+    margin-bottom: -1em;
 }
 h1 { width: 80%; }
 h2 { width: 60%; }
@@ -65,62 +67,22 @@ strong { color: rgb(27, 31, 35); }
     color: white;
 }
 
-li, form { text-align: left; }
-li {
-    margin-left: 7%;
-    padding-right: 3em;
-    padding-bottom: 0.5em;
+#footer {
+    background-color: rgb(47, 51, 55);
+    width: 100%;
+    color: rgba(255, 255, 255, 0.8);
+    border-top: 0.2em solid black;
+    padding-bottom: 0.25em;
 }
-
-form {
-    margin-left: auto;
-    margin-right: auto;
-    width: 85%;
-    border: 0.2em solid black;
-}
-form input, form textarea { margin-left: 2em; }
-form div {
-    padding-left: 2em;
-    padding-right: 2em;
-}
-span {
-    font-weight: bold;
-    padding-left: 1.6em;
-}
-.labels-br { display: none; }
-#e-mail { width: 60%; }
-#issue-description {
-    font: inherit;
-    resize: none;
-    margin-top: 0;
-    width: 93%;
-    height: 6em;
-    margin-left: 1.6em;
-}
-#send {
-    margin: 1em auto 1.5em 2.3em;
-    color: white;
-    font: inherit;
-    font-size: 0.9em;
-    font-weight: bold;
-    padding: 0.2em 1em 0.2em 1em;
-    background-color: rgb(67, 71, 75);
-    border: 0.1em solid rgb(27, 31, 35);
-}
-#send:hover { background-color: rgb(107, 111, 115); }
+#footer p, #footer h3 { text-align: left; }
+#footer h3 {  padding-left: 1.75em; }
+#footer p { padding-left: 2em; }
 
 @media screen and (max-width: 960px) {
     p {
         padding-left: 4em;
         padding-right: 4em;
     }
-    #issue-description {
-        width: 87%;
-        height: 9em;
-    }
-}
-@media screen and (max-width: 560px) {
-    .labels-br { display: inline; }
 }
 @media screen and (max-width: 610px) {
     .demo-table {
@@ -130,8 +92,4 @@ span {
         border: 0.1em solid black;
     }
     .demo-table td { min-width: 12em; }
-    #issue-description {
-        width: 78%;
-        height: 12em;
-    }
 }
